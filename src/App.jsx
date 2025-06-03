@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, BarChart3, Users, Heart, MessageCircle, Share2, TrendingUp, Plus, Send, Eye, Clock, Settings, Bell, Search, Filter } from 'lucide-react';
+import { Calendar, BarChart3, User, Heart, MessageCircle, Share2, ArrowUp, Plus, Send, EyeIcon, Clock, Settings, Bell, Search, Filter } from 'lucide-react';
 
 const SocialMediaDashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -59,7 +59,7 @@ const SocialMediaDashboard = () => {
     }
   };
 
-  const StatCard = ({ title, value, icon: Icon, change, color = "text-blue-600" }) => (
+  const StatCard = ({ title, value, icon: Icon, change, color = "#2563eb" }) => (
     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
       <div className="flex items-center justify-between">
         <div>
@@ -67,13 +67,13 @@ const SocialMediaDashboard = () => {
           <p className="text-2xl font-bold text-gray-900 mt-1">{value}</p>
           {change && (
             <p className="text-sm text-green-600 mt-1 flex items-center">
-              <TrendingUp className="w-4 h-4 mr-1" />
+              <ArrowUp className="w-4 h-4 mr-1 text-green-600" />
               +{change}% from last month
             </p>
           )}
         </div>
-        <div className={`p-3 rounded-lg bg-opacity-10 ${color.replace('text-', 'bg-')}`}>
-          <Icon className={`w-6 h-6 ${color}`} />
+        <div className="p-3 rounded-lg" style={{ backgroundColor: `${color}15` }}>
+          <Icon className="w-6 h-6" style={{ color: color }} />
         </div>
       </div>
     </div>
@@ -119,8 +119,8 @@ const SocialMediaDashboard = () => {
             {[
               { id: 'overview', label: 'Overview', icon: BarChart3 },
               { id: 'schedule', label: 'Schedule Posts', icon: Calendar },
-              { id: 'analytics', label: 'Analytics', icon: TrendingUp },
-              { id: 'engagement', label: 'Engagement', icon: Users }
+              { id: 'analytics', label: 'Analytics', icon: ArrowUp },
+              { id: 'engagement', label: 'Engagement', icon: User }
             ].map((item) => (
               <button
                 key={item.id}
@@ -159,30 +159,30 @@ const SocialMediaDashboard = () => {
                 <StatCard
                   title="Total Followers"
                   value={analyticsData.overview.totalFollowers.toLocaleString()}
-                  icon={Users}
+                  icon={User}
                   change={12.5}
-                  color="text-blue-600"
+                  color="#2563eb"
                 />
                 <StatCard
                   title="Engagement Rate"
                   value={`${analyticsData.overview.engagement}%`}
                   icon={Heart}
                   change={8.2}
-                  color="text-pink-600"
+                  color="#dc2626"
                 />
                 <StatCard
                   title="Total Reach"
                   value={analyticsData.overview.reach.toLocaleString()}
-                  icon={Eye}
+                  icon={EyeIcon}
                   change={15.7}
-                  color="text-green-600"
+                  color="#16a34a"
                 />
                 <StatCard
                   title="Impressions"
                   value={analyticsData.overview.impressions.toLocaleString()}
-                  icon={TrendingUp}
+                  icon={ArrowUp}
                   change={22.1}
-                  color="text-purple-600"
+                  color="#9333ea"
                 />
               </div>
 
@@ -412,20 +412,20 @@ const SocialMediaDashboard = () => {
                   title="Pending Responses"
                   value="23"
                   icon={MessageCircle}
-                  color="text-orange-600"
+                  color="#ea580c"
                 />
                 <StatCard
                   title="New Mentions"
                   value="47"
                   icon={Bell}
-                  color="text-blue-600"
+                  color="#2563eb"
                 />
                 <StatCard
                   title="Response Rate"
                   value="94%"
-                  icon={TrendingUp}
+                  icon={ArrowUp}
                   change={5.2}
-                  color="text-green-600"
+                  color="#16a34a"
                 />
               </div>
 
