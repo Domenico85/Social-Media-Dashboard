@@ -82,16 +82,16 @@ const SocialMediaDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-4">
+      <header className=" px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <h1 className="text-2xl font-bold text-gray-900">Social Dashboard</h1>
             <div className="relative">
-              <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-black-400" />
               <input
                 type="text"
                 placeholder="Search..."
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="pl-10 pr-4 py-2 border border-black-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -114,7 +114,7 @@ const SocialMediaDashboard = () => {
 
       <div className="flex">
         {/* Sidebar */}
-        <nav className="w-64 bg-white border-r border-gray-200 min-h-screen p-4">
+        <nav className="w-64 min-h-screen p-4">
           <div className="space-y-2">
             {[
               { id: 'overview', label: 'Overview', icon: BarChart3 },
