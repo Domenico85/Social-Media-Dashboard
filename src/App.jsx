@@ -1,3 +1,4 @@
+// imports
 import React, { useState, useEffect } from 'react';
 import { Calendar, BarChart3, User, Heart, MessageCircle, Share2, ArrowUp, Plus, Send, EyeIcon, Clock, Settings, Bell, Search, Filter } from 'lucide-react';
 
