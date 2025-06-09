@@ -12,7 +12,7 @@ const SocialMediaDashboard = () => {
   const [newPost, setNewPost] = useState({ content: '', platform: 'twitter', date: '', time: '' });
   const [notifications, setNotifications] = useState(3);
 
-  // Mock analytics data
+  // Mock analytics data.
   const analyticsData = {
     overview: {
       totalFollowers: 45672,
